@@ -1,4 +1,4 @@
-# WARNING
+# DISCLAIMER
 This script should be used at your own risk, I will not be responsible for any errors encountered while using the script or caused by the script.  Use of the script means that you understand this warning and agree that you are using the script at your own risk.
 
 All of that said, I have been using this script to manage my deals and it is working as expected.
@@ -36,6 +36,17 @@ The name of the bot that we are managing.
 
 ### Running
 Running the script is rather straightforward `python bp_deal_manager.py`
+
+### Sample Output
+```
+2021-05-18 15:40:30,234 - INFO - Checking the status of the active deals.
+2021-05-18 15:40:31,041 - INFO - Check complete, there are 6 active deals and 0 required updating.
+2021-05-18 15:41:31,076 - INFO - Checking the status of the active deals.
+2021-05-18 15:41:31,423 - INFO - Deal 529667701 on pair USDT_VTHO has 3 completed safety orders and a take profit value of 0.42 which is below the strategy recommended value.
+2021-05-18 15:41:31,423 - INFO - Updating deal 529667701 take profit to 1.0
+2021-05-18 15:41:32,592 - INFO - Deal 529667701 successfully updated
+2021-05-18 15:41:32,592 - INFO - Check complete, there are 6 active deals and 1 required updating.
+```
 
 ### Questions or Problems
 If you run into any issues, please create an issue on this repository and I will do what I can to help out.
