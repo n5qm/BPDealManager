@@ -78,34 +78,34 @@ try:
                 for key in deal:
                     print(key, '->', deal[key], '->', type(deal[key]))
 
-            # display current status
+            # we are only interested in the both with the name listed in the configuration
             if (deal['bot_name'] == BOT_NAME):
                 active_deals +=1
 
-            # look for deals that need updating
-            if (deal['completed_safety_orders_count'] == 3 and deal['take_profit'] != '1.0'):
-                updated_deals += 1
-                deal_update_tp(deal['id'], 1.0, deal['pair'], deal['completed_safety_orders_count'], deal['take_profit'])
+                # look for deals that need updating
+                if (deal['completed_safety_orders_count'] == 3 and deal['take_profit'] != '1.0'):
+                    updated_deals += 1
+                    deal_update_tp(deal['id'], 1.0, deal['pair'], deal['completed_safety_orders_count'], deal['take_profit'])
 
-            elif (deal['completed_safety_orders_count'] == 4 and deal['take_profit'] != '2.0'):
-                updated_deals += 1
-                deal_update_tp(deal['id'], 2.0, deal['pair'], deal['completed_safety_orders_count'], deal['take_profit'])
+                elif (deal['completed_safety_orders_count'] == 4 and deal['take_profit'] != '2.0'):
+                    updated_deals += 1
+                    deal_update_tp(deal['id'], 2.0, deal['pair'], deal['completed_safety_orders_count'], deal['take_profit'])
 
-            elif (deal['completed_safety_orders_count'] == 5 and deal['take_profit'] != '3.0'):
-                updated_deals += 1
-                deal_update_tp(deal['id'], 3.0, deal['pair'], deal['completed_safety_orders_count'], deal['take_profit'])
+                elif (deal['completed_safety_orders_count'] == 5 and deal['take_profit'] != '3.0'):
+                    updated_deals += 1
+                    deal_update_tp(deal['id'], 3.0, deal['pair'], deal['completed_safety_orders_count'], deal['take_profit'])
 
-            elif (deal['completed_safety_orders_count'] == 6 and deal['take_profit'] != '4.0'):
-                updated_deals += 1
-                deal_update_tp(deal['id'], 4.0, deal['pair'], deal['completed_safety_orders_count'], deal['take_profit'])
+                elif (deal['completed_safety_orders_count'] == 6 and deal['take_profit'] != '4.0'):
+                    updated_deals += 1
+                    deal_update_tp(deal['id'], 4.0, deal['pair'], deal['completed_safety_orders_count'], deal['take_profit'])
 
-            elif (deal['completed_safety_orders_count'] == 7 and deal['take_profit'] != '5.0'):
-                updated_deals += 1
-                deal_update_tp(deal['id'], 5.0, deal['pair'], deal['completed_safety_orders_count'], deal['take_profit'])
+                elif (deal['completed_safety_orders_count'] == 7 and deal['take_profit'] != '5.0'):
+                    updated_deals += 1
+                    deal_update_tp(deal['id'], 5.0, deal['pair'], deal['completed_safety_orders_count'], deal['take_profit'])
 
-            elif (deal['completed_safety_orders_count'] == 8 and deal['take_profit'] != '6.0'):
-                updated_deals += 1
-                deal_update_tp(deal['id'], 6.0, deal['pair'], deal['completed_safety_orders_count'], deal['take_profit'])
+                elif (deal['completed_safety_orders_count'] == 8 and deal['take_profit'] != '6.0'):
+                    updated_deals += 1
+                    deal_update_tp(deal['id'], 6.0, deal['pair'], deal['completed_safety_orders_count'], deal['take_profit'])
 
         logging.info('Check complete, there are %d active deals and %d required updating.', active_deals, updated_deals)
         # sleep for 60 seconds and start again
