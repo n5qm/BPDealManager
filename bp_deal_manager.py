@@ -1,11 +1,12 @@
 from py3cw.request import Py3CW
 import logging
+import os
 import time
 
-### CONFIGURE 3C API KEY and BOT NAME HERE ###
-API_KEY = ''
-API_SECRET = ''
-BOT_NAME = 'Block Party Testing'
+### CONFIGURE 3C API KEY and BOT NAME HERE WITHIN THE SECOND SET OF QUOTES ON EACH LINE OR SET THEM WITH DOCKER ENVIRONMENT VARIABLES ###
+API_KEY = os.getenv('API_KEY', '')
+API_SECRET = os.getenv('API_SECRET', '')
+BOT_NAME = os.getenv('BOT_NAME', '')
 DEBUG = 0
 
 
