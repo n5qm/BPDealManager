@@ -23,15 +23,17 @@ This Python script is intended to manage the Active Trader style of the [Block P
 * py3cw Python module available at the [Project Homepage](https://github.com/bogdanteodoru/py3cw) or via pip `pip install py3cw`.
 
 ### Configuration
-The script requires minimal configuration.  All of the necessary changes are made at the top of the file.
+The script requires minimal configuration.  All of the necessary changes are made at the top of the file.  Replace the *** with your information as required.
 
-`API_KEY = ''`
+It is also important to note that the configuration may be passed via environment variables for those running this script within a Docker container.
+
+`API_KEY = os.getenv('API_KEY', '***')`
 An API key for your 3Commas account.  The required permission are BotsRead and BotsWrite.
 
-`API_SECRET = ''`
+`API_SECRET = os.getenv('API_SECRET', '***')`
 The API secret that matches the API key used.
 
-`BOT_NAME = 'Block Party Bot'`
+`BOT_NAME = os.getenv('BOT_NAME', '***')`
 The name of the bot that we are managing.
 
 ### Running
