@@ -53,7 +53,8 @@ def get_active_deals():
         entity='deals',
         action='',
         payload={
-            "scope": "active"
+            "scope": "active",
+            "limit": "1000"
         }
     )
     if (error):
